@@ -20,7 +20,7 @@ crontab -e
 
 ```bash
 # 每天五点开始备份数据库
-0 5 * * * bash /root/backup/index.sh
+0 5 * * * cd /root/mysql-backup;/bin/bash /root/mysql-backup/index.sh
 
 ```
 
