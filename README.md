@@ -62,7 +62,7 @@ backupFile="`pwd`/mysql_backup/`date +%Y-%m-%dT%H:%M:%S`.sql.gz"
 mkdir -p mysql_backup
 
 # 执行备份任务
-docker exec -it $dockerId /usr/bin/mysqldump --all-databases -u"$username" -p"$password" | gzip > $backupFile
+docker exec $dockerId /usr/bin/mysqldump --all-databases -u"$username" -p"$password" | gzip > $backupFile
 
 echo $backupFile
 ```
